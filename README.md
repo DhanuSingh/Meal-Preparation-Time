@@ -20,12 +20,10 @@ The data consists of restaurant identifier, order price, number of items in the 
 This dataset has 30,000 orders done across 20 restaurants. Lets look at the data distribution.
 <img width="868" alt="Screenshot 2022-05-24 at 8 33 30 PM" src="https://user-images.githubusercontent.com/50412680/170942031-4c7f9750-77f3-4ad9-afa3-a8c3debcb526.png">
 
-Num. of orders for different restaurants
-
 We see that the data isn't skewed, there are at least ~1000 orders per restaurant.
 Now lets try to see as to what affects meal preparation time.
 <img width="870" alt="Screenshot 2022-05-23 at 10 01 37 PM" src="https://user-images.githubusercontent.com/50412680/170941969-9df2c617-8f0d-4595-957d-5816c74002b8.png">
-Median meal prep time over queued orders.
+
 We can see that barring couple of values, meal preparation time increases with increase in queued orders. This seems logical.
 <img width="751" alt="Screenshot 2022-05-24 at 8 34 59 PM" src="https://user-images.githubusercontent.com/50412680/170942106-c0df9739-6788-4f90-b431-233b34d1874c.png">
 
@@ -41,7 +39,7 @@ Lets explore some feature engineering. We have order time and date. Therefore if
 # Random Forest
 Random Forest is a bagging technique. It consists of several tree based weak learners. Together they help reduce the bias-variance trade off. The key hyperparameters for Random Forest are the number of estimators/base learners & max depth of the trees used in the bagging. Apart from these, minimum samples to split, max feature and max sample proportion were also tuned but these didn't impacted performance much. One observation was that as max depth was increased, model started overfitting. This was because each base learner was becoming more deeper. Thus, RMSE reduced for training data but not for validation data. Hence, a sweet spot was found where both the errors were minimum.
 <img width="898" alt="Screenshot 2022-05-24 at 10 00 22 PM" src="https://user-images.githubusercontent.com/50412680/170942232-cba1c415-7ec4-464a-9032-0c3620a49aff.png">
-Fig shows overfitting for depth > 15
+
 Finally after tuning the relevant parameters, it resulted in the mean square error of 3.56 mins on training data and 3.95 mins for validation data. There has been an improvement of around half a minute from baseline solution. This can have a great impact when we use it at a large scale marketplace.
 
 # Productionizing the model
