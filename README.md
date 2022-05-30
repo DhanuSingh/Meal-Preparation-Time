@@ -15,7 +15,7 @@ Interpretability: Model interpretability is good to have but is not very importa
 
 # Data analysis
 The data consists of restaurant identifier, order price, number of items in the order, number of orders in queue, the time order is placed and the actual preparation time. Attached is a snapshot of the data:
-<img width="638" alt="Screenshot 2022-05-24 at 8 32 21 PM" src="https://user-images.githubusercontent.com/50412680/170941784-ef579b18-b56e-4bb0-a7c4-59ff559abd37.png">Overview of the tabular data
+<img width="638" alt="Screenshot 2022-05-24 at 8 32 21 PM" src="https://user-images.githubusercontent.com/50412680/170941784-ef579b18-b56e-4bb0-a7c4-59ff559abd37.png">
 
 This dataset has 30,000 orders done across 20 restaurants. Lets look at the data distribution.
 <img width="868" alt="Screenshot 2022-05-24 at 8 33 30 PM" src="https://user-images.githubusercontent.com/50412680/170942031-4c7f9750-77f3-4ad9-afa3-a8c3debcb526.png">
